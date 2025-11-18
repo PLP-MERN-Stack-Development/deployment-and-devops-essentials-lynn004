@@ -1,0 +1,37 @@
+{
+  "name": "deployment-and-devops-essentials-lynn004",
+  "version": "1.0.0",
+  "description": "This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.",
+  "main": "index.js",
+  "scripts": {
+  "start": "node backend/server.js",
+  "dev": "nodemon backend/server.js",
+  "client": "npm start --prefix frontend",
+  "build": "npm run build --prefix frontend",
+  "start:prod": "NODE_ENV=production node backend/server.js"
+},
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PLP-MERN-Stack-Development/deployment-and-devops-essentials-lynn004.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/PLP-MERN-Stack-Development/deployment-and-devops-essentials-lynn004/issues"
+  },
+  "homepage": "https://github.com/PLP-MERN-Stack-Development/deployment-and-devops-essentials-lynn004#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "mongoose": "^8.20.0",
+    "morgan": "^1.10.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
