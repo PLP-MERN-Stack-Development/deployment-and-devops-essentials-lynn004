@@ -2,7 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://kurwalynn.github.io/deployment-and-devops-essentials-lynn004-frontend",
+  "homepage": "https://plp-mern-stack-development.github.io/deployment-and-devops-essentials-lynn004",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",

@@ -1,70 +1,118 @@
-# Getting Started with Create React App
+# Deployment and DevOps Essentials — MERN Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository contains my MERN application deployed using cloud hosting and configured with CI/CD, monitoring, and environment management.  
+It was completed as part of the **Deployment & DevOps Essentials** assignment.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+# 🌐 Deployed Application Links
 
-### `npm start`
+### **Frontend**
+🔗 <https://github.com/PLP-MERN-Stack-Development/deployment-and-devops-essentials-lynn004.git>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **Backend API**
+🔗 <https://deployment-and-devops-essentials-lynn004.onrender.com>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+# 📦 Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+# 🚀 CI/CD Pipeline (Render)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This project uses **Render’s auto-deployment pipeline** connected to GitHub.  
+Every time I push to the main branch, Render automatically:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Pulls the new commit
+2. Installs dependencies
+3. Builds the backend
+4. Deploys the new version
+5. Runs health checks
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 📸 CI/CD Screenshots
 
-### `npm run eject`
+### **1. Render Build Logs**
+Shows installation, build process, and deployment output.  
+![Render Build Logs](./screenshots/render-build.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **2. Auto-Deploy Trigger**
+Shows Render detecting a new GitHub commit and triggering deployment.  
+![Render Auto Deploy](./screenshots/render-deploy.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **3. GitHub → Render Webhook Integration**
+Proof of CI/CD connection.  
+![GitHub Webhook](./screenshots/webhook.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# 📊 Monitoring & Logging Setup
 
-## Learn More
+Monitoring ensures the application stays healthy and easy to debug.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **🔧 Monitoring Tools Used**
+| Tool | Purpose |
+|------|---------|
+| **Render Live Logs** | View runtime logs and errors in real time |
+| **Render Deploy Logs** | Monitor build and deploy steps |
+| **Health Check Endpoint** | Render automatically pings service to verify uptime |
+| **Error Logs** | For backend crash and exception tracking |
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 📸 Monitoring Screenshot
+![Render Logs](./screenshots/render-logs.png)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# 🛠️ Environment Variables
 
-### Analyzing the Bundle Size
+The following environment variables are required:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+A `.env.example` file is included in the repo.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+# ⚙️ Technologies Used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **MongoDB Atlas**
+- **Express.js**
+- **React** (if frontend included)
+- **Node.js**
+- **Render** (Backend Hosting & CI/CD)
+- **GitHub** (Source Control)
+- **dotenv** (Environment Variables)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+# 🔄 Deployment Strategy
 
-### `npm run build` fails to minify
+### **Backend Deployment**
+- Hosted on **Render**
+- Auto deploys from GitHub main branch
+- Connected using GitHub → Render web service
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **Frontend Deployment**
+- Hosted on <Vercel / Netlify / Render>  
+- Auto deploys on push  
+- Uses production environment variables
+
+---
+
+# 📅 Maintenance Plan
+
+- Regular dependency updates  
+- Monitor logs weekly  
+- Backup MongoDB using Atlas snapshot tools  
+- Documented rollback process:  
+  - Revert GitHub commit → Render redeploys previous working version
+
+---
+
+# 👤 Author
+
+**Lynn Kurwa**  
+Deployment & DevOps Essentials Project
+
+---
+
+
